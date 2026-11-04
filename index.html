@@ -53,6 +53,129 @@ button:hover{background:#c69be0;transform:translateY(-3px)}button:active{transfo
 .photo-frame img{display:block;width:100%;height:auto;border-radius:10px}
 .photo-caption{font-family:'Pacifico',cursive;color:#c57bb5;font-size:17px;margin:12px}
 @media(max-width:360px){.dress-tabs button{padding:9px 10px}.doll{width:185px}h1{font-size:31px}}
+/* OVERALL ALIGNMENT */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 91%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.container > * {
+  max-width: 100%;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card > * {
+  max-width: 100%;
+}
+
+.character {
+  display: block;
+  margin: 22px auto 5px;
+}
+
+.doll-stage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doll {
+  display: flex;
+  justify-content: center;
+  width: 205px;
+  max-width: 100%;
+}
+
+.doll svg {
+  display: block;
+}
+
+.dress-tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selection-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selection-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dress-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.finish-button {
+  align-self: center;
+}
+
+.letter-paper {
+  width: 100%;
+  text-align: left;
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 290px;
+  margin: 16px auto;
+}
+
+.photo-frame img {
+  width: 100%;
+  display: block;
+}
+
+#finishedLook,
+#giftMessage,
+#photoReveal {
+  width: 100%;
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: 94%;
+  }
+
+  .card {
+    padding: 20px 12px;
+  }
+
+  .selection-box {
+    padding: 9px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -60,7 +183,7 @@ button:hover{background:#c69be0;transform:translateY(-3px)}button:active{transfo
 <div class="container">
   <span class="tag">♡ A SPECIAL DAY ♡</span>
   <h1>It's Carla Day!</h1>
-  <p class="small">the world is a little more carla today 🎀</p>
+  <p class="small">tumabi po muna kayo, birthday niiiii karluhluhluh 🎀</p>
 
   <div class="character" onclick="talk()">
     <svg viewBox="0 0 200 240" aria-label="Carla cartoon">
@@ -92,13 +215,13 @@ button:hover{background:#c69be0;transform:translateY(-3px)}button:active{transfo
       <p>
         Happy birthday, Carla!! 💗
         <br><br>
-        I hope you enjoy your special day and that this new chapter brings you lots of happiness, good memories, and opportunities to grow.
+        I genuinely appreciate you so much bro, kahit na hindi masyado naga-talk ang mga eabab peru sobra na sobrang pagmamahal ang mayroon ako para sa'yo ehey. Anyway, I hope na masaya ka today, cuz bakit hindi? IT'S YOUR BIRTHDAYYY!!
         <br><br>
-        Thank you for being you, even with all your kaartehan and mataras moments HAHAHA. I hope you never lose the things that make you who you are.
+        Thank you for being you, even with all your uhm makalog and mataras moments HAHAHA. I hope you never lose the things that make you who you are. And I say that with all honesty.
         <br><br>
-        Always remember na you deserve good things, genuine friendships, and people who appreciate you. I hope you get to experience more of the things that make you happy.
+        Always remember na you deserve good things, genuine friendships, and people who appreciate you. I hope you get to experience more of the things that make you happy^^.
         <br><br>
-        Enjoy your day, birthday girl! Stay healthy, keep laughing, and don't forget to treat yourself today.
+        Enjoy your day, birthday girl! Stay healthy, i-reremind sana kitang 'wag kalimutang tumawa pero feel ko..., wag na.
         <br><br>
         With love, ♡
       </p>
@@ -166,19 +289,19 @@ button:hover{background:#c69be0;transform:translateY(-3px)}button:active{transfo
     <div class="section-label">✧ ONE LITTLE PRESENT ✧</div><h2>You have a gift!</h2>
     <div class="gift" onclick="openGift()" id="gift" style="font-size:65px;cursor:pointer;display:inline-block">🎁</div>
     <p class="small">go on, open it. it's yours!</p>
-    <div id="giftMessage" class="message hidden">SURPRISEEEE!! 💗<br><br>Your gift is a lifetime supply of good memories, genuine happiness, random adventures, and people who appreciate you.<br><br>Unfortunately, no actual money included. 😭</div>
+    <div id="giftMessage" class="message hidden">SURPRISEEEE!! 💗<br><br>Ako gift mo beybe gerl hehe. jok jok, ako ngayon si fairy godmother wherein I'm blessing you with a lifetime supply of good memories, genuine happiness, masaaayang adventures and people who appreciate you.<br><br>Unfortunately, wala ako pera para maibigay hehe. 😭</div>
   </div>
 
   <!-- INTERACTIVE PHOTO REVEAL -->
   <div class="card">
     <div class="section-label">✧ THE BIRTHDAY GIRL HERSELF ✧</div>
     <h2>caught in 4K 📸</h2>
-    <p class="small">a very Carla moment hehe</p>
+    <p class="small">etu nga pala si KARLUHLUH</p>
     <button onclick="togglePhoto()" id="photoButton">reveal the photo ♡</button>
     <div id="photoReveal" class="hidden">
       <div class="photo-frame"><img src="carla-photo.jpg" alt="Carla's birthday photo"></div>
-      <p class="photo-caption">ARAY 😭💗</p>
-      <p class="small">the birthday girl in her natural habitat</p>
+      <p class="photo-caption">'wag masyadong masama ang ugali</p>
+      <p class="small">pati adik nakaisip niyan</p>
       <button onclick="togglePhoto()">hide photo 🙈</button>
     </div>
   </div>
@@ -195,24 +318,52 @@ button:hover{background:#c69be0;transform:translateY(-3px)}button:active{transfo
 </div>
 
 <script>
-const dialogues=["Nanu ya naman ing buri mu? 😭","Birthday ku, dapat special ku!","Aray!","Mabaknal ka sana ne. 😭","Ay nako, birthday ku ngayon!","Mangan tana! Gutom na ku."];
-function talk(){const bubble=document.getElementById("carlaTalk");bubble.textContent=dialogues[Math.floor(Math.random()*dialogues.length)];bubble.animate([{transform:"scale(.8)",opacity:.3},{transform:"scale(1.1)",opacity:1},{transform:"scale(1)",opacity:1}],{duration:350});}
+
+const dialogues=["nanu ya naman ing buri mu? 😭","wiwi","aguy","mabaknal ka sana ne. 😭","prescense m lang oks na","tara, ano?"];
+
+function talk(){
+ const bubble=document.getElementById("carlaTalk");
+ bubble.textContent=dialogues[Math.floor(Math.random()*dialogues.length)];
+ bubble.animate([{transform:"scale(.8)",opacity:.3},{transform:"scale(1.1)",opacity:1},{transform:"scale(1)",opacity:1}],{duration:350});
+}
 
 function toggleLetter(){
-  const letter=document.getElementById("letterContent");
-  const isOpening=letter.classList.contains("hidden");
-  letter.classList.toggle("hidden");
-  document.getElementById("envelope").textContent=isOpening?"💌":"✉️";
-  document.getElementById("letterButton").textContent=isOpening?"close your letter ♡":"open your letter ♡";
-  if(isOpening) letter.scrollIntoView({behavior:"smooth",block:"nearest"});
+ const letter=document.getElementById("letterContent");
+ const isOpening=letter.classList.contains("hidden");
+ letter.classList.toggle("hidden");
+ document.getElementById("envelope").textContent=isOpening?"💌":"✉️";
+ document.getElementById("letterButton").textContent=isOpening?"close your letter ♡":"open your letter ♡";
+ if(isOpening) letter.scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 
 const styles={
- hair:[["💇🏻‍♀️","Long wavy hair"],["👩🏻","Short bob"],["🎀","Two ponytails"],["🌸","Cute bun"],["✨","Half-up hair"]],
- outfit:[["👕","Yellow striped shirt"],["👗","Pink dress"],["💜","Lavender dress"],["🌷","Floral outfit"]],
- accessory:[["🌼","Yellow flowers"],["🎀","Pink bow"],["👑","Princess crown"],["💗","Heart clips"]],
- shoes:[["👟","Pink sneakers"],["🥿","Lavender flats"],["👢","Cute boots"],["✨","Glitter shoes"]]
+ hair:[
+  ["💇🏻‍♀️","Abnormal"],
+  ["👩🏻","Siya si Dora"],
+  ["🎀","Hetty"],
+  ["🌸","Chinese c-drama actor"],
+  ["✨","Kalahati"]
+ ],
+ outfit:[
+  ["👕","Yellow na may strayps"],
+  ["👗","Penk dress"],
+  ["💜","Porpol"],
+  ["🌷","Nableached"]
+ ],
+ accessory:[
+  ["🌼","Yellow flowers"],
+  ["🎀","Pink bow"],
+  ["👑","Princess crown"],
+  ["💗","Heart clips"]
+ ],
+ shoes:[
+  ["👟","Pink sneakers"],
+  ["🥿","Lavender flats"],
+  ["👢","Cute boots"],
+  ["✨","Glitter (na wala) shoes"]
+ ]
 };
+
 let category="hair";
 let selected={hair:0,outfit:0,accessory:0,shoes:0};
 
@@ -222,11 +373,13 @@ function changeCategory(type){
  document.getElementById("tab-"+type).classList.add("active");
  updateStyle();
 }
+
 function moveStyle(direction){
  const options=styles[category];
  selected[category]=(selected[category]+direction+options.length)%options.length;
  updateStyle();
 }
+
 function updateStyle(){
  const item=styles[category][selected[category]];
  document.getElementById("styleEmoji").textContent=item[0];
@@ -234,69 +387,213 @@ function updateStyle(){
  document.getElementById("styleNumber").textContent=(selected[category]+1)+" / "+styles[category].length;
  applyAppearance();
 }
+
 function applyAppearance(){
- const back=document.getElementById("backHair"),front=document.getElementById("frontHair"),extra=document.getElementById("hairExtra");
- const body=document.getElementById("bodyColor"),stripes=document.getElementById("stripes"),accessory=document.getElementById("accessory"),shoes=document.getElementById("shoes");
- back.style.display="block";front.style.display="block";extra.innerHTML="";
+ const back=document.getElementById("backHair");
+ const front=document.getElementById("frontHair");
+ const extra=document.getElementById("hairExtra");
+ const body=document.getElementById("bodyColor");
+ const stripes=document.getElementById("stripes");
+ const accessory=document.getElementById("accessory");
+ const shoes=document.getElementById("shoes");
+
+ back.style.display="block";
+ front.style.display="block";
+ extra.innerHTML="";
+
  const hairColor="#30252e";
+
  if(selected.hair===0){
   back.innerHTML=`<path d="M48 75 Q30 15 100 20 Q170 15 152 80 L165 185 Q145 215 137 150 L60 150 Q48 210 32 180Z" fill="${hairColor}"/>`;
   front.innerHTML=`<path d="M61 77 Q54 23 103 25 Q151 23 140 78 Q118 57 105 51 Q87 70 61 77Z" fill="${hairColor}"/>`;
+
  }else if(selected.hair===1){
   back.innerHTML=`<path d="M48 75 Q30 15 100 20 Q170 15 152 80 L145 145 Q100 170 55 145Z" fill="${hairColor}"/>`;
   front.innerHTML=`<path d="M61 77 Q54 23 103 25 Q151 23 140 78 Q118 57 105 51 Q87 70 61 77Z" fill="${hairColor}"/>`;
+
  }else if(selected.hair===2){
-  back.innerHTML=`<path d="M48 75 Q30 15 100 20 Q170 15 152 80 L155 132 Q100 150 45 132Z" fill="${hairColor}"/>
+  back.innerHTML=`
+  <path d="M48 75 Q30 15 100 20 Q170 15 152 80 L155 132 Q100 150 45 132Z" fill="${hairColor}"/>
   <path d="M53 48 Q20 24 22 83 Q20 112 43 119 Q56 103 49 80Z" fill="${hairColor}"/>
   <path d="M147 48 Q180 24 178 83 Q180 112 157 119 Q144 103 151 80Z" fill="${hairColor}"/>
   <path d="M42 67 Q28 61 31 82 M158 67 Q172 61 169 82" stroke="#5a4655" stroke-width="3" fill="none"/>`;
+
   front.innerHTML=`<path d="M61 77 Q54 23 103 25 Q151 23 140 78 Q118 57 105 51 Q87 70 61 77Z" fill="${hairColor}"/>`;
-  extra.innerHTML=`<g fill="#e9a6d1"><circle cx="43" cy="72" r="5"/><circle cx="157" cy="72" r="5"/></g>`;
+
+  extra.innerHTML=`
+  <g fill="#e9a6d1">
+    <circle cx="43" cy="72" r="5"/>
+    <circle cx="157" cy="72" r="5"/>
+  </g>`;
+
  }else if(selected.hair===3){
   back.innerHTML=`<path d="M48 75 Q30 15 100 20 Q170 15 152 80 L145 145 Q100 160 55 145Z" fill="${hairColor}"/><circle cx="100" cy="24" r="25" fill="${hairColor}"/>`;
   front.innerHTML=`<path d="M61 77 Q54 23 103 25 Q151 23 140 78 Q118 57 105 51 Q87 70 61 77Z" fill="${hairColor}"/>`;
+
  }else{
   back.innerHTML=`<path d="M48 75 Q30 15 100 20 Q170 15 152 80 L150 150 Q100 165 50 150Z" fill="${hairColor}"/>`;
   front.innerHTML=`<path d="M61 77 Q54 23 103 25 Q151 23 140 78 Q118 57 105 51 Q87 70 61 77Z" fill="${hairColor}"/><path d="M75 39 Q100 -2 126 39" stroke="#30252e" stroke-width="13" fill="none"/>`;
  }
+
  const outfitColors=["#f6e9bd","#f4a9d2","#c4a7ec","#f5c5d7"];
  body.setAttribute("fill",outfitColors[selected.outfit]);
  stripes.style.display=selected.outfit===0?"block":"none";
+
  const accessories=[
  `<g fill="#ffe36c"><circle cx="65" cy="27" r="7"/><circle cx="72" cy="34" r="7"/><circle cx="65" cy="41" r="7"/><circle cx="58" cy="34" r="7"/><circle cx="65" cy="34" r="3" fill="white"/></g>`,
+
  `<path d="M65 28 Q43 4 43 30 Q45 45 65 38 Q85 45 87 30 Q87 4 65 28Z" fill="#f3a5d3"/><circle cx="65" cy="32" r="5" fill="#fff"/>`,
+
  `<path d="M45 40 L50 12 L65 27 L80 12 L85 40Z" fill="#f8d875" stroke="#d5a94c" stroke-width="3"/><circle cx="65" cy="30" r="5" fill="#e8a6d2"/>`,
+
  `<g fill="#e99bca"><circle cx="65" cy="30" r="10"/><path d="M65 22 L68 29 L76 30 L69 35 L71 43 L65 38 L58 43 L60 35 L53 30 L62 29Z" fill="#fff1f8"/></g>`
  ];
+
  accessory.innerHTML=accessories[selected.accessory];
+
  const shoeColors=["#e9a6d1","#bca0e8","#c58c7e","#f6d879"];
- shoes.innerHTML=`<ellipse cx="83" cy="250" rx="17" ry="8" fill="${shoeColors[selected.shoes]}"/><ellipse cx="121" cy="250" rx="17" ry="8" fill="${shoeColors[selected.shoes]}"/>`;
- const comments=["looking cute already! ♡","birthday outfit unlocked!","the birthday girl is serving!","okayyy fashion icon!"];
+
+ shoes.innerHTML=`
+ <ellipse cx="83" cy="250" rx="17" ry="8" fill="${shoeColors[selected.shoes]}"/>
+ <ellipse cx="121" cy="250" rx="17" ry="8" fill="${shoeColors[selected.shoes]}"/>
+ `;
+
+ const comments=[
+  "saffer sa kyot! ♡",
+  "birthday outfit unlocked!",
+  "ayun, pwede na talagang makulong!",
+  "okayyy dress to impress yarn?"
+ ];
+
  document.getElementById("dollComment").textContent=comments[Math.floor(Math.random()*comments.length)];
 }
-function randomStyle(){Object.keys(styles).forEach(key=>selected[key]=Math.floor(Math.random()*styles[key].length));updateStyle();}
-function resetStyle(){selected={hair:0,outfit:0,accessory:0,shoes:0};updateStyle();changeCategory("hair");document.getElementById("finishedLook").classList.add("hidden");}
-function finishLook(){document.getElementById("finishedLook").classList.remove("hidden");document.getElementById("dollComment").textContent="CARLA IS READY FOR HER BIRTHDAY!! 💗";celebrate();document.getElementById("finishedLook").scrollIntoView({behavior:"smooth",block:"center"});}
+
+function randomStyle(){
+ Object.keys(styles).forEach(key=>selected[key]=Math.floor(Math.random()*styles[key].length));
+ updateStyle();
+}
+
+function resetStyle(){
+ selected={hair:0,outfit:0,accessory:0,shoes:0};
+ updateStyle();
+ changeCategory("hair");
+ document.getElementById("finishedLook").classList.add("hidden");
+}
+
+function finishLook(){
+ document.getElementById("finishedLook").classList.remove("hidden");
+ document.getElementById("dollComment").textContent="CARLA IS READY FOR HER BIRTHDAY!! 💗";
+ celebrate();
+ document.getElementById("finishedLook").scrollIntoView({behavior:"smooth",block:"center"});
+}
+
 changeCategory("hair");
 
+// CAKE
+
 let cakeBlown=false;
-function blowCandles(){if(cakeBlown)return;cakeBlown=true;document.getElementById("cake").textContent="🍰";document.getElementById("cakeText").textContent="WISH GRANTED!! well... hopefully. ♡";celebrate();}
-function resetCake(){cakeBlown=false;document.getElementById("cake").textContent="🎂";document.getElementById("cakeText").textContent="tap the cake to blow out the candles!";}
-function openGift(){const message=document.getElementById("giftMessage");message.classList.toggle("hidden");document.getElementById("gift").textContent=message.classList.contains("hidden")?"🎁":"💝";if(!message.classList.contains("hidden"))celebrate();}
-function togglePhoto(){const photo=document.getElementById("photoReveal");const opening=photo.classList.contains("hidden");photo.classList.toggle("hidden");document.getElementById("photoButton").textContent=opening?"hide the photo 🙈":"reveal the photo ♡";if(opening)celebrate();}
+
+function blowCandles(){
+ if(cakeBlown)return;
+ cakeBlown=true;
+ document.getElementById("cake").textContent="🍰";
+ document.getElementById("cakeText").textContent="WISH GRANTED!! well... sana. ♡";
+ celebrate();
+}
+
+function resetCake(){
+ cakeBlown=false;
+ document.getElementById("cake").textContent="🎂";
+ document.getElementById("cakeText").textContent="tap the cake to blow out the candles!";
+}
+
+// GIFT
+
+function openGift(){
+ const message=document.getElementById("giftMessage");
+ message.classList.toggle("hidden");
+ document.getElementById("gift").textContent=message.classList.contains("hidden")?"🎁":"💝";
+ if(!message.classList.contains("hidden"))celebrate();
+}
+
+// PHOTO REVEAL
+
+function togglePhoto(){
+ const photo=document.getElementById("photoReveal");
+ const opening=photo.classList.contains("hidden");
+ photo.classList.toggle("hidden");
+ document.getElementById("photoButton").textContent=opening?"hide the photo 🙈":"reveal the photo ♡";
+ if(opening)celebrate();
+}
+
+// WISH COUNTER
+
 let wishes=0;
-function addWish(){wishes++;document.getElementById("counter").textContent=wishes+" ♡";if(wishes%5===0)celebrate();}
+
+function addWish(){
+ wishes++;
+ document.getElementById("counter").textContent=wishes+" ♡";
+ if(wishes%5===0)celebrate();
+}
+
+// CONFETTI
+
 function celebrate(){
- const canvas=document.getElementById("confetti"),ctx=canvas.getContext("2d");
- canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+ const canvas=document.getElementById("confetti");
+ const ctx=canvas.getContext("2d");
+
+ canvas.width=window.innerWidth;
+ canvas.height=window.innerHeight;
+
  const pieces=[];
- for(let i=0;i<110;i++)pieces.push({x:Math.random()*canvas.width,y:-20-Math.random()*canvas.height,size:Math.random()*7+3,speed:Math.random()*4+2,color:["#efaed6","#c4a4ed","#ffe18b","#ffffff"][Math.floor(Math.random()*4)]});
+
+ for(let i=0;i<110;i++){
+  pieces.push({
+   x:Math.random()*canvas.width,
+   y:-20-Math.random()*canvas.height,
+   size:Math.random()*7+3,
+   speed:Math.random()*4+2,
+   color:["#efaed6","#c4a4ed","#ffe18b","#ffffff"][Math.floor(Math.random()*4)]
+  });
+ }
+
  let frame=0;
- function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);pieces.forEach(p=>{ctx.fillStyle=p.color;ctx.fillRect(p.x,p.y,p.size,p.size);p.y+=p.speed;p.x+=Math.sin(p.y/20);});if(++frame<100)requestAnimationFrame(draw);else ctx.clearRect(0,0,canvas.width,canvas.height);}
+
+ function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  pieces.forEach(p=>{
+   ctx.fillStyle=p.color;
+   ctx.fillRect(p.x,p.y,p.size,p.size);
+   p.y+=p.speed;
+   p.x+=Math.sin(p.y/20);
+  });
+
+  if(++frame<100){
+   requestAnimationFrame(draw);
+  }else{
+   ctx.clearRect(0,0,canvas.width,canvas.height);
+  }
+ }
+
  draw();
 }
+
+// FLOATING DECORATIONS
+
 const decorations=["♡","✧","✿","♥"];
-for(let i=0;i<20;i++){const item=document.createElement("div");item.className="sparkle";item.textContent=decorations[Math.floor(Math.random()*decorations.length)];item.style.left=Math.random()*100+"vw";item.style.animationDelay=Math.random()*6+"s";item.style.animationDuration=(5+Math.random()*5)+"s";item.style.fontSize=(12+Math.random()*12)+"px";item.style.color=Math.random()>.5?"#d89acb":"#bca0e8";document.body.appendChild(item);}
+
+for(let i=0;i<20;i++){
+ const item=document.createElement("div");
+ item.className="sparkle";
+ item.textContent=decorations[Math.floor(Math.random()*decorations.length)];
+ item.style.left=Math.random()*100+"vw";
+ item.style.animationDelay=Math.random()*6+"s";
+ item.style.animationDuration=(5+Math.random()*5)+"s";
+ item.style.fontSize=(12+Math.random()*12)+"px";
+ item.style.color=Math.random()>.5?"#d89acb":"#bca0e8";
+ document.body.appendChild(item);
+}
 </script>
 </body>
 </html>
